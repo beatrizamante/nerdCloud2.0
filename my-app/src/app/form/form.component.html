@@ -6,7 +6,7 @@
     <title>atividade 11</title>
   </head>
   <body>
-    <form>
+    <form><!--two-way-binding-->
       <div class="input">
         <label for="name">Nome</label> <br />
         <input type="text" [(ngModel)]="nome" name="nome" />
@@ -22,10 +22,10 @@
       <div class="input">
         <label for="email">Email</label> <br />
         <input type="text" [(ngModel)]="email" name="email" />
-      </div>
-      <div class="submit">
-        <input type="submit" value="Enviar" />
-      </div>
+      </div><!--two-way-binding-->
+      <div class="submit"><!--event-binding-->
+        <input type="submit" (click)="buttonClick($event)" value="Enviar" />
+      </div><!--event-binding-->
     </form>
     <p>{{ nome }}</p>
     <p>{{ sobrenome }}</p>

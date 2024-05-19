@@ -8,9 +8,14 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
-export class FormComponent {
+export class FormComponent { //two-way-bindib=ng
   nome: string = '';
   sobrenome: string = '';
   endereco: string = '';
   email: string = '';
+
+  buttonClick(event:Event) { //event-binding
+    event.preventDefault();
+    alert('Os dados foram enviados')
+  }
 }
